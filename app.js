@@ -1,1 +1,1 @@
-prompt('Welcome to My Matching Game!  What is your name?');
+let userName = prompt('Welcome to My Matching Game!  What is your name?');
