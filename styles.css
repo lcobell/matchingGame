@@ -1,29 +1,48 @@
 *      {
     box-sizing: border-box;
     background-color: white;
+    padding: 0;
 }
 h1 {
     text-align: center;
     color: red;
     
 }
-
-#board {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 90vh;
-    width: auto;
-    background-color: black;
-    border: 5px solid red;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
+body {
+    height: 100vh;
 }
 
-.gameCards {
+.board {
     display: flex;
+    flex-wrap: wrap;
+    height: 700px;
+    width: 700px;
+    margin: auto;
+   
+
     
-    height: 150px;
-    width: 150px;
-    border: 10
+    
+
+   
+}
+
+.card {
+    width: 25%;
+    height: 33.33%;
+    position: relative;
+
+
+    
+   
+}
+
+
+.cardFace, 
+.back {
+    position: absolute;
+    
+   
+}
+.flip {
+    transform: rotateZ(180deg);
 }

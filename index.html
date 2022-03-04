@@ -14,20 +14,116 @@
 
 <body>
   <h1>Match-a-Palooza!</h1>
-  <div id="board">
-      <img src="images/walkingThruFence.jpeg" class="gameCards">
-      <img src="images/dogPointingAtCat.jpeg" class="gameCards">
-      <img src="images/catWatchingTv.jpeg" class="gameCards">
-      <img src="images/recylceDog.png" class="gameCards">
-      <img src="images/guardDog.png" class="gameCards">
-      <img src="images/onlineEdu.png" class="gameCards">
-      <img src="images/frisbeeDog.png" class="gameCards">
-      <img src="images/dogWpups.png" class="gameCards">
-      <img src="images/dogsAtDinner.png" class="gameCards">
-      <img src="images/dogMining.png" class="gameCards">
-      <img src="images/doggyBank.png" class="gameCards">
-      <img src="images/dogReadingPaper.jpeg" class="gameCards">
-  </div>
+
+  <!-- Section Div for the actual gameboard -->
+  <section class="board">    
+<!-- Each div is a card, pairs are together -->
+    
+    <div class="card" id="cardA">
+      <img src="images/walkingThruFence.jpeg" alt="Dog walking through a fence" width="100" height="100" class="cardFace">
+      <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
+    </div>  
+    <div class="card" id="cardA1">
+        <img src="images/walkingThruFence.jpeg" alt="Dog walking through a fence" width="100" height="100" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
+      </div> 
+
+      <div class="card" id="cardB">
+        <img src="images/dogPointingAtCat.jpeg" class="cardFace" width="100" height="100">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
+      </div>
+      <div class="card" id="cardB1">
+        <img src="images/dogPointingAtCat.jpeg" width="100" height="100" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
+      </div>
+
+      <div class="card" id="cardC">
+        <img src="images/catWatchingTv.jpeg" width="100" height="100" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
+      </div>
+      <div class="card" id="cardC1">
+        <img src="images/catWatchingTv.jpeg" width="100" height="100" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
+      </div>
+
+      <div class="card" id="cardD">
+        <img src="images/recylceDog.png" width="100" height="100" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
+      </div> 
+      <div class="card" id="cardD1">
+        <img src="images/recylceDog.png" width="100" height="100" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
+      </div> 
+
+      <div class="card" id="cardE">
+        <img src="images/guardDog.png" width="100" height="100" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
+      </div>
+      <div class="card" id="cardE1">
+        <img src="images/guardDog.png" width="100" height="100" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
+      </div>
+
+      <div class="card" id="cardF">
+        <img src="images/onlineEdu.png" width="100" height="100" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
+      </div>
+      <div class="card" id="cardF1">
+        <img src="images/onlineEdu.png" width="100" height="100" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
+      </div>
+
+      <!-- Extra Cards to expand the game, maybe for level 2 or a more difficult option -->
+      <!-- <div class="card">
+        <img src="images/frisbeeDog.png" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" class="back">
+      </div>
+      <div class="card">
+        <img src="images/frisbeeDog.png" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" class="back">
+      </div>
+      <div class="card">
+        <img src="images/dogWpups.png" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" class="back">
+      </div>
+      <div class="card">
+        <img src="images/dogWpups.png" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" class="back">
+      </div>
+      <div class="card">
+        <img src="images/dogsAtDinner.png" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" class="back">
+      </div>
+      <div class="card">
+        <img src="images/dogsAtDinner.png" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" class="back">
+      </div>
+      <div class="card">
+        <img src="images/dogMining.png" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" class="back">
+      </div>
+      <div class="card">
+        <img src="images/dogMining.png" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" class="back">
+      </div>
+      <div class="card">
+        <img src="images/doggyBank.png" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" class="back">
+      </div>
+      <div class="card">
+        <img src="images/doggyBank.png" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" class="back">
+      </div>
+      <div class="card">
+        <img src="images/dogReadingPaper.jpeg" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" class="back">
+      </div>
+      <div class="card">
+        <img src="images/dogReadingPaper.jpeg" class="cardFace">
+        <img src="images/cardBack.png" alt="Blue and black geometric design" class="back"> -->
+      </div>
+    
+  
   <script src="app.js" defer></script>
 </body>
 </html>
