@@ -1,3 +1,4 @@
+
 *      {
     box-sizing: border-box;
     background-color: white;
@@ -10,6 +11,7 @@ h1 {
 }
 body {
     height: 100vh;
+    
 }
 
 .board {
@@ -19,12 +21,8 @@ body {
     width: 700px;
     margin: auto;
    
-
-    
-    
-
-   
 }
+    
 
 .card {
     width: 25%;
@@ -43,6 +41,7 @@ body {
     
    
 }
+
 .flip {
-    transform: rotateZ(180deg);
+    display: none;
 }
