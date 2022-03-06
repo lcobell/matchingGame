@@ -10,6 +10,7 @@ h1 {
 }
 body {
     height: 100vh;
+    
 }
 
 .board {
@@ -18,13 +19,10 @@ body {
     height: 700px;
     width: 700px;
     margin: auto;
-   
-
-    
-    
-
+    perspective: 1000px;
    
 }
+    
 
 .card {
     width: 25%;
@@ -44,5 +42,6 @@ body {
    
 }
 .flip {
-    transform: rotateZ(180deg);
+   
+    display: none;
 }

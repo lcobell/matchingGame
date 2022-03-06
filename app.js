@@ -1,10 +1,15 @@
 // Get the players name 
 let userName = prompt('What is your name?') 
 
-let card = document.getElementById('cardA')
+let cards = document.querySelectorAll('.card');
 
-document.getElementById('cardA').addEventListener('click', flip);
+for (var i =0; i < cards.length; i++) {
+    let card = cards[i];
+    console.log('adding listener for ' + card.id);
+    card.addEventListener('click', function () {flip(card)});
+}
 
-function flip() {
-    document.getElementById('cardA').classList.toggle('flip');
+function flip(card) {
+    console.log('flipping' + card.id);
+    card.children[1].classList.toggle('flip');
 }
