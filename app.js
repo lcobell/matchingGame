@@ -1,6 +1,5 @@
 document.addEventListener('DomContentLoaded', () => {
 
-<<<<<<< Updated upstream
 let cards = document.querySelectorAll('.card');
 
 for (var i =0; i < cards.length; i++) {
@@ -13,9 +12,6 @@ function flip(card) {
     console.log('flipping' + card.id);
     card.children[1].classList.toggle('flip');
 }
-=======
-
-
 
 // let card = document.getElementById('cardA')
 
