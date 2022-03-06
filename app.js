@@ -1,93 +1,48 @@
-document.addEventListener('DomContentLoaded', () => {
+let selectedCards = [];
 
-let cards = document.querySelectorAll('.card');
+function flipCard(card) {
 
-for (var i =0; i < cards.length; i++) {
-    let card = cards[i];
-    console.log('adding listener for ' + card.id);
-    card.addEventListener('click', function () {flip(card)});
-}
+    if (selectedCards.includes(card)) {
+        return;
+    }
 
-function flip(card) {
-    console.log('flipping' + card.id);
+    console.log('flipping ' + card.id);
     card.children[1].classList.toggle('flip');
+
+    selectedCards.push(card);
+
+    //if (selectedCards.length == 2) {
+
+    //}
+
 }
 
-// let card = document.getElementById('cardA')
+function getCards() {
+    let cards = document.getElementsByClassName('card');
+    return cards;
+}
 
-// document.getElementById('cardA').addEventListener('click', flip);
-
-// function flip() {
-//     document.getElementById('cardA').classList.toggle('flip');
-// }
-
-// card Array
-const ArrayOfCards = [
-    {
-        front: "fenceDog",
-        img: "images/dogWalkingThruFence.png", 
-    },
-    {
-        front: "fenceDog",
-        img: "images/dogWalkingThruFence.png",
-    },
-    {
-        front: "pointingDog",
-        img: "images/dogPointingAtCat.png"
-    },
-    {
-        front: "pointingDog",
-        img: "images/dogPointingAtCat.png"
-    },
-    {
-        front: "tvCat",
-        img: "images/catWatchingTv.png"
-    },
-    {
-        front: "tvCat",
-        img: "images/catWatchingTv.png"
-    },
-    {
-        front: "recycleDog",
-        img: "images/recycleDog.png"
-    },
-    {
-        front: "recycleDog",
-        img: "images/recycleDog.png"
-    },
-    {
-        front: "guardDog",
-        img: "images/guardDog.png"
-    },
-    {
-        front: "guardDog",
-        img: "images/guardDog.png"
-    },
-    {
-        front: "eduDog",
-        img: "images/onlineEdu.png"
-    },
-    {
-        front: "eduDog",
-        img: "images/onlineEdu.png"
-    }
-]
-
-
-const board = document.querySelector(".board")
-
-function setBoard () {
-    for (let i = 0; i < ArrayOfCards.length; i++) {
-        let card = document.createElement("img")
-        card.setAttribute("src", "images/cardBack.png")
-        card.setAttribute("data-id", i)
-        board.appendChild(card)
-        
-        //card.addEventListener("onclick", flip)
-
+function setupCards() {
+    let cards = getCards();
+    for (var i = 0; i < cards.length; i++) {
+        let card = cards[i];
+        console.log('adding listener for ' + card.id);
+        card.addEventListener('click', function () { flipCard(card); });
     }
 }
-setBoard()
 
-})
->>>>>>> Stashed changes
+function main() {
+    // Get the players name 
+    let userName = 'abc'; //prompt('What is your name?') 
+
+    setupCards();
+
+    let cardsToMatch = getCards();
+
+    //while (cardsToMatch.length > 0) {
+
+    //}
+
+}
+
+main()
