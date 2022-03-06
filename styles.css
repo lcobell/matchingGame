@@ -1,37 +1,52 @@
-*      {
+/* *      {
     box-sizing: border-box;
     background-color: white;
     padding: 0;
-}
+} */
 h1 {
     text-align: center;
     color: red;
     
 }
-body {
+/* body {
     height: 100vh;
+<<<<<<< Updated upstream
     
 }
+=======
+} */
+>>>>>>> Stashed changes
 
 .board {
     display: flex;
     flex-wrap: wrap;
+<<<<<<< Updated upstream
     height: 700px;
     width: 700px;
     margin: auto;
     perspective: 1000px;
+=======
+    height: 300px;
+    width: 400px;
+   
+   
+
+    
+    
+
+>>>>>>> Stashed changes
    
 }
     
 
-.card {
+/* .card {
     width: 25%;
     height: 33.33%;
-    position: relative;
+    position: relative; */
 
 
     
-   
+/*    
 }
 
 
@@ -42,6 +57,11 @@ body {
    
 }
 .flip {
+<<<<<<< Updated upstream
    
     display: none;
 }
+=======
+    transform: rotateZ(180deg);
+} */
+>>>>>>> Stashed changes

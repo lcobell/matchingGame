@@ -9,6 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="cards" href="images">
+   
 </head>
   
 
@@ -16,10 +17,11 @@
   <h1>Match-a-Palooza!</h1>
 
   <!-- Section Div for the actual gameboard -->
-  <section class="board">    
-<!-- Each div is a card, pairs are together -->
+  <div class="board">    
+<!-- Each div is a card, pairs are together Trying a different approach,
+cards are moved to the app.js file as an array, this looks more similar to the DOM work we were doing -->
     
-    <div class="card" id="cardA">
+    <!-- <div class="card" id="cardA">
       <img src="images/walkingThruFence.jpeg" alt="Dog walking through a fence" width="100" height="100" class="cardFace">
       <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
     </div>  
@@ -71,7 +73,7 @@
       <div class="card" id="cardF1">
         <img src="images/onlineEdu.png" width="100" height="100" class="cardFace">
         <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">
-      </div>
+      </div> -->
 
       <!-- Extra Cards to expand the game, maybe for level 2 or a more difficult option -->
       <!-- <div class="card">
@@ -124,6 +126,6 @@
       </div>
     
   
-  <script src="app.js" defer></script>
+  <script src="app.js" charset="utf-8"></script>
 </body>
 </html>
