@@ -44,3 +44,7 @@ body {
 .flip {
     display: none;
 }
+
+img {
+    position: fixed;
+}

@@ -1,7 +1,7 @@
 let selectedCards = [];
 let matches = [];
 
-let cardInfos = [
+let cardInfo = [
     {
         'img': 'dogWalkingThroughFence.png',
         'alt': 'Dog walking through a fence'
@@ -27,6 +27,21 @@ let cardInfos = [
         'alt': 'Dog learning online'
     }
 ]
+// var timer = 30;
+// var timeElement = document.getElementById('timer')
+// var timeInterval = setInterval(timeRemaining, 1000);
+
+// attempting to countdown from 30 by one...  
+// function timeRemaining() {
+//     if (timer == -1) {
+//         clearTimeout(timeInterval);
+//         timesUp();
+//     } else {
+//         timeElement.innerHTML = timeRemaining + '...';
+//         timer--;
+//     }
+// }
+
 // Drawing the cards and appending them to the board
 function drawCard(cardInfo) {
     let board = document.getElementById('board');
@@ -44,21 +59,24 @@ function drawCard(cardInfo) {
 
  // Interactive logic
  function shuffleCards() {
-    for (var i = 0; i < cardInfos.length; i++) {
-        drawCard(cardInfos[i]);
-        drawCard(cardInfos[i]);
+    for (var i = 0; i < cardInfo.length; i++) {
+        drawCard(cardInfo[i]);
+        drawCard(cardInfo[i]);
         
     }
 }
 
-
+let moveCount = document.getElementById('moves');
  // toggle, html on top is turned off for the "flip"
  function toggleCard(card) {
+    moveCount.innerHTML = moves ++;
+    //  moveCount.innerHTML = moves.toString().padStart("0");
     console.log('flipping ' + card.id);
     card.children[1].classList.toggle('flip');
 }
 
 function checkWin() {
+    
     let cardsToMatch = getCards();
     if (cardsToMatch.length == 0) {
         alert('You win!');
@@ -88,8 +106,12 @@ function makeMove(card) {
                 selectedCards[1].classList.value = 'done';
                 selectedCards = [];
                 checkWin();
+                
             }, 1000);
         } else {
+            moveCount = moves++;
+            // moveCount.innerHTML = moves.toString().padStart(4, "0");
+            
             console.log('match miss');
             setTimeout(function() {
                 toggleCard(selectedCards[0]);
@@ -115,7 +137,9 @@ function setupCards() {
     return cards;
 }
 
+
 function main() {
     let unmatchedCards = setupCards();
+ 
 }
 main()
