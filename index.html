@@ -21,16 +21,21 @@
   <div class="scoreBoard">
       <div><button onclick="location.reload();" id="reset">Play Again?</button></div>
     <div>
-      <span class="scoring">Score: </span>
-      <span class="counting" id="moves">0</span>
+      <!-- <span class="scoring">Score: </span>
+      <span class="counting" id="moves">0</span> -->
       
     </div>
   
-
+    <h3>Moves</h3>
+    <div>
+        <h3 id="counter-label">0</h3>
+    </div>
+    
 
   <!-- Section Div for the actual gameboard -->
+  <div onclick="oneMove()">
   <section class="board" id ="board"></section>  
-    
+</div>
   <script src="app.js" charset="utf-8"></script>
 </body>
 </html>

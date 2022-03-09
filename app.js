@@ -29,23 +29,20 @@ let cardInfo = [
 ]
 
 window.onload = function() {
-    let clickCard = document.getElementsByClassName("moves");
-    clickCard.onclick = incrementClick;
+    let clickCard = document.getElementsByClassName("board");
+
+}
+// counter
+var counterVal = 0;
+
+function oneMove() {
+    updateDisplay(++counterVal);
 }
 
-let clickCount = 0;
-function incrementClick () {
-    updateCounter(++clickCount)
+function updateDisplay(val) {
+    document.getElementById("counter-label").innerHTML = val;
 }
- incrementClick = function() {
-     updateCount(++clickCount)
- }
-
- function updateCounter(val) {
-     document.getElementById("moves").innerHTML = val;
- }
-
-// timer
+// counter
 let timeLeft = 30;
 let elem = document.getElementById('timerDiv');
 let timerId = setInterval(countdown, 1000);
@@ -53,14 +50,14 @@ let timerId = setInterval(countdown, 1000);
 function countdown() {
     if (timeLeft == -1) {
         clearTimeout(timerId);
-        doSomething();
+        loseMessage();
     } else {
         elem.innerHTML = timeLeft + ' seconds to match all of the cards!';
         timeLeft--;
     }
 }
 
-function doSomething() {
+function loseMessage() {
     alert("Time is Up!");
 }
 // counter
