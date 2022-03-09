@@ -27,20 +27,51 @@ let cardInfo = [
         'alt': 'Dog learning online'
     }
 ]
-// var timer = 30;
-// var timeElement = document.getElementById('timer')
-// var timeInterval = setInterval(timeRemaining, 1000);
 
-// attempting to countdown from 30 by one...  
-// function timeRemaining() {
-//     if (timer == -1) {
-//         clearTimeout(timeInterval);
-//         timesUp();
-//     } else {
-//         timeElement.innerHTML = timeRemaining + '...';
-//         timer--;
-//     }
-// }
+window.onload = function() {
+    let clickCard = document.getElementsByClassName("moves");
+    clickCard.onclick = incrementClick;
+}
+
+let clickCount = 0;
+function incrementClick () {
+    updateCounter(++clickCount)
+}
+ incrementClick = function() {
+     updateCount(++clickCount)
+ }
+
+ function updateCounter(val) {
+     document.getElementById("moves").innerHTML = val;
+ }
+
+// timer
+let timeLeft = 30;
+let elem = document.getElementById('timerDiv');
+let timerId = setInterval(countdown, 1000);
+
+function countdown() {
+    if (timeLeft == -1) {
+        clearTimeout(timerId);
+        doSomething();
+    } else {
+        elem.innerHTML = timeLeft + ' seconds to match all of the cards!';
+        timeLeft--;
+    }
+}
+
+function doSomething() {
+    alert("Time is Up!");
+}
+// counter
+var button = document.getElementsByClassName("moves"),
+  count = 0;
+button.onclick = function() {
+  count += 1;
+  button.innerHTML = "Click me: " + count;
+};
+
+
 
 // Drawing the cards and appending them to the board
 function drawCard(cardInfo) {
@@ -57,7 +88,7 @@ function drawCard(cardInfo) {
   
  }
 
- // Interactive logic
+
  function shuffleCards() {
     for (var i = 0; i < cardInfo.length; i++) {
         drawCard(cardInfo[i]);
@@ -66,12 +97,14 @@ function drawCard(cardInfo) {
     }
 }
 
+
 let moveCount = document.getElementById('moves');
  // toggle, html on top is turned off for the "flip"
  function toggleCard(card) {
-    moveCount.innerHTML = moves ++;
+    // moveCount.innerHTML = moves ++;
     //  moveCount.innerHTML = moves.toString().padStart("0");
     console.log('flipping ' + card.id);
+  
     card.children[1].classList.toggle('flip');
 }
 
@@ -82,6 +115,7 @@ function checkWin() {
         alert('You win!');
     }
 }
+
 function makeMove(card) {
 
     // cannot select an already selected card
@@ -109,8 +143,8 @@ function makeMove(card) {
                 
             }, 1000);
         } else {
-            moveCount = moves++;
-            // moveCount.innerHTML = moves.toString().padStart(4, "0");
+            // moveCount = moves++;
+          
             
             console.log('match miss');
             setTimeout(function() {

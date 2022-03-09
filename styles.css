@@ -27,24 +27,19 @@ body {
     width: 25%;
     height: 33.33%;
     position: relative;
-
-
-    
-   
 }
 
 
 .cardFace, 
 .back {
     position: absolute;
-    
-   
 }
 
 .flip {
     display: none;
 }
 
-img {
-    position: fixed;
+#timerDiv {
+    display: flex;
+    justify-content: center;
 }
