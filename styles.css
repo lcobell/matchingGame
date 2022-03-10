@@ -1,16 +1,21 @@
 *      {
     box-sizing: border-box;
-    background-color: white;
+    background-color: #00FFDD;
     padding: 0;
 }
 h1 {
     text-align: center;
-    color: red;
-    
+    color: #0E185F
+}
+h2 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
 }
 body {
     height: 100vh;
-    
+    background-color: #00FFDD;
 }
 
 .board {
@@ -19,8 +24,25 @@ body {
     height: 700px;
     width: 700px;
     margin: auto;
+    background-color: #00FFDD;
    
 }
+button {
+    display: inline-block;
+    background-color: #0E185F;
+    border-radius: 360px;
+    color: #a3a3a3
+    border: 4px double  ;
+    color: #E8FFC2;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 1s;
+  }
+  button:hover {
+    background-color: #2FA4FF;
+  }
     
 
 .card {
@@ -42,4 +64,5 @@ body {
 #timerDiv {
     display: flex;
     justify-content: center;
+
 }
