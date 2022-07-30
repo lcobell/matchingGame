@@ -1,68 +1,111 @@
-*      {
-    box-sizing: border-box;
-    background-color: #00FFDD;
-    padding: 0;
+.nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #00FFDD;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  float: left;
+  margin: 0 0 3em 0;
+  padding: 0;
+  list-style: none;
+  background-color: #00FFDD;
+  border-bottom: 7px solid #00FFDD;
+  border-top: 7px solid #00FFDD;
 }
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.nav ul:focus {
+  background-color: red;
+}
+.nav ul li {
+  display: inline;
+  margin: 0;
+  padding: 25px;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: #00FFDD;
+  padding: 0;
+}
+
 h1 {
-    text-align: center;
-    color: #0E185F
+  font-family: "Roboto", sans-serif;
+  margin-top: 50px;
+  text-align: center;
+  color: #0E185F;
 }
+
 h2 {
-    text-align: center;
+  text-align: center;
 }
+
 h3 {
-    text-align: center;
+  text-align: center;
 }
+
 body {
-    height: 100vh;
-    background-color: #00FFDD;
+  height: 100vh;
+  background-color: #00FFDD;
 }
 
 .board {
-    display: flex;
-    flex-wrap: wrap;
-    height: 700px;
-    width: 700px;
-    margin: auto;
-    background-color: #00FFDD;
-   
+  display: flex;
+  flex-wrap: wrap;
+  height: 700px;
+  width: 700px;
+  margin: auto;
 }
+
 button {
-    display: inline-block;
-    background-color: #0E185F;
-    border-radius: 360px;
-    color: #a3a3a3
-    border: 4px double  ;
-    color: #E8FFC2;
-    text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 200px;
-    transition: all 1s;
-  }
-  button:hover {
-    background-color: #2FA4FF;
-  }
-    
+  display: inline-block;
+  background-color: #0E185F;
+  border-radius: 360px;
+  color: #a3a3a3;
+  border: 4px double #a3a3a3;
+  color: #E8FFC2;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 1s;
+}
+button:hover {
+  background-color: #2FA4FF;
+  color: #E8FFC2;
+}
 
 .card {
-    width: 25%;
-    height: 33.33%;
-    position: relative;
+  width: 25%;
+  height: 33.33%;
+  position: relative;
 }
 
-
-.cardFace, 
+.cardFace,
 .back {
-    position: absolute;
+  position: absolute;
 }
 
 .flip {
-    display: none;
+  display: none;
 }
 
 #timerDiv {
-    display: flex;
-    justify-content: center;
-
-}
+  display: flex;
+  justify-content: center;
+  height: 10px;
+  font-size: 20px;
+  font-style: "Work Sans", sans-serif;
+}/*# sourceMappingURL=styles.css.map */

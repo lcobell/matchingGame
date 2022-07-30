@@ -82,14 +82,18 @@ function drawCard(cardInfo) {
                  <img src="images/cardBack.png" alt="Blue and black geometric design" width="100" height="100" class="back">`;
      div.innerHTML = html;
      board.appendChild(div);
+
+     
   
  }
+
 
 
  function shuffleCards() {
     for (var i = 0; i < cardInfo.length; i++) {
         drawCard(cardInfo[i]);
         drawCard(cardInfo[i]);
+        
         
     }
 }
@@ -98,8 +102,7 @@ function drawCard(cardInfo) {
 let moveCount = document.getElementById('moves');
  // toggle, html on top is turned off for the "flip"
  function toggleCard(card) {
-    // moveCount.innerHTML = moves ++;
-    //  moveCount.innerHTML = moves.toString().padStart("0");
+   
     console.log('flipping ' + card.id);
   
     card.children[1].classList.toggle('flip');
@@ -173,4 +176,5 @@ function main() {
     let unmatchedCards = setupCards();
  
 }
+
 main()

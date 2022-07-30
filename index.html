@@ -8,30 +8,38 @@
   <meta name="description" content="" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="cards" href="images">
-<!-- jquery -->
+    <!-- <link rel="cards" href="images"> -->
+    
   
-
+    <h1>Match-a-Palooza!</h1>
+    <div id="timerDiv"></div>
 </head>
+<body>
+  <nav class="nav">
+    <ul>
+      <li><a href="https://github.com/lcobell">Logan's Github</a></li>
+      <li><a href="https://www.linkedin.com/in/logancobell/">Logan's LinkedIn</a></li>
+      <li><a href="https://techready.uillinois.edu/">DPI TechReady</a></li>
+      <li><a href="https://www.rpmrestaurants.com/rpm-steak-chicago/">RPM Steak</a></li>
+    </ul>
+  </nav>
+ 
   
 
-<body>
-  <h1>Match-a-Palooza!</h1>
-<div id="timerDiv"></div>
   <div class="scoreBoard">
      <h2> <div><button onclick="location.reload();" id="reset">Play Again?</button></div>
-    <div></h2>
-      <!-- <span class="scoring">Score: </span>
-      <span class="counting" id="moves">0</span> -->
+<div>
+      
+     
       
     </div>
-  
+   
     <h3>Moves</h3>
     <div>
         <h3 id="counter-label">0</h3>
     </div>
     
-
+  
   <!-- Section Div for the actual gameboard -->
   <div onclick="oneMove()">
   <section class="board" id ="board"></section>
@@ -44,5 +52,5 @@
      Icons8 "Woof Collection"</a> Card Deck backs courtesy of <a href="https://www.vecteezy.com/free-vector/ornament">Ornament Vectors by Vecteezy</a>
 
     </footer>
-</body>
+  </body>
 </html>

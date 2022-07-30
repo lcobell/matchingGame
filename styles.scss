@@ -1,0 +1,131 @@
+$primary-background: #00FFDD;
+$h1-color: #0E185F;
+$hover-color: #2FA4FF;
+$Font-lg: 20px;
+$Font-md: 30px;
+$Font-sm: 20px;
+$border-style: 7px solid #00FFDD; 
+$font-header: 'Roboto', sans-serif;
+$font-timer: 'Work Sans', sans-serif;
+$focus-color: red;
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: $primary-background;
+    width: 100%;
+    font-size: $Font-lg;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    
+    
+    width: 100%;
+    float: left;
+    margin: 0 0 3em 0;
+    padding: 0;
+    list-style: none;
+    background-color: $primary-background;
+    border-bottom: $border-style;
+    border-top: $border-style;
+    
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        &:focus {
+            background-color: $focus-color;
+        }
+        
+        li {
+            display: inline;
+            margin: 0;
+            padding: 25px;
+        
+        }
+    
+    }
+}
+*      {
+    box-sizing: border-box;
+    background-color: $primary-background;
+    
+    padding: 0;
+}
+h1 {
+    font-family: $font-header;
+    margin-top: 50px;
+    text-align: center;
+    color: $h1-color;
+}
+h2 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+body {
+    height: 100vh;
+   
+    background-color: $primary-background;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    height: 700px;
+    width: 700px;
+    margin: auto;
+   
+}
+button {
+    display: inline-block;
+    background-color: $h1-color;
+    border-radius: 360px;
+    color: #a3a3a3;
+    border: 4px double #a3a3a3;
+    color: #E8FFC2;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 1s;
+    &:hover {
+        background-color: $hover-color;
+        color: #E8FFC2;
+    }
+
+    
+}
+.card {
+    width: 25%;
+    height: 33.33%;
+    position: relative;
+}
+
+
+.cardFace, 
+.back {
+    position: absolute;
+}
+
+.flip {
+    display: none;
+}
+
+#timerDiv {
+    
+    display: flex;
+    justify-content: center;
+    height: 10px;
+    font-size: $Font-lg;
+    font-style: $font-timer;
+
+    
+}
