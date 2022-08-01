@@ -70,8 +70,15 @@ h2 {
 h3 {
     text-align: center;
 }
-body {
+
+@mixin full-height {
     height: 100vh;
+}
+    
+
+body {
+    @include full-height;
+    // height: 100vh;
    
     background-color: $primary-background;
 }
@@ -109,11 +116,22 @@ button {
     position: relative;
 }
 
-
-.cardFace, 
-.back {
+@mixin absolute() {
     position: absolute;
+    
 }
+.cardFace, .back {
+    @include absolute();
+
+}
+// .cardBack {
+//     @include absolute();
+  
+// }
+// .cardFace, 
+// .back {
+//     position: absolute;
+// }
 
 .flip {
     display: none;

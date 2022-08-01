@@ -93,8 +93,7 @@ button:hover {
   position: relative;
 }
 
-.cardFace,
-.back {
+.cardFace, .back {
   position: absolute;
 }
 
