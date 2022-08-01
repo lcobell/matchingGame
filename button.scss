@@ -1,0 +1,19 @@
+button {
+    display: inline-block;
+    background-color: $h1-color;
+    border-radius: 360px;
+    color: #a3a3a3;
+    border: 4px double #a3a3a3;
+    color: #E8FFC2;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 1s;
+    &:hover {
+        background-color: $hover-color;
+        color: #E8FFC2;
+    }
+
+    
+}

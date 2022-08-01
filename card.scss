@@ -1,0 +1,26 @@
+.card {
+    width: 25%;
+    height: 33.33%;
+    position: relative;
+}
+
+@mixin absolute() {
+    position: absolute;
+    
+}
+.cardFace, .back {
+    @include absolute();
+
+}
+// .cardBack {
+//     @include absolute();
+  
+// }
+// .cardFace, 
+// .back {
+//     position: absolute;
+// }
+
+.flip {
+    display: none;
+}

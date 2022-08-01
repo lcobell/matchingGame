@@ -1,3 +1,7 @@
+@use 'nav';
+@use 'button';
+@use 'card';
+
 $primary-background: #00FFDD;
 $h1-color: #0E185F;
 $hover-color: #2FA4FF;
@@ -8,50 +12,10 @@ $border-style: 7px solid #00FFDD;
 $font-header: 'Roboto', sans-serif;
 $font-timer: 'Work Sans', sans-serif;
 $focus-color: red;
-
-.nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: $primary-background;
-    width: 100%;
-    font-size: $Font-lg;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0px;
-    text-align: left;
-    position: absolute;
-    top: 0;
-    
-    
-    width: 100%;
-    float: left;
-    margin: 0 0 3em 0;
-    padding: 0;
-    list-style: none;
-    background-color: $primary-background;
-    border-bottom: $border-style;
-    border-top: $border-style;
-    
-    
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        &:focus {
-            background-color: $focus-color;
-        }
-        
-        li {
-            display: inline;
-            margin: 0;
-            padding: 25px;
-        
-        }
-    
-    }
+@mixin full-width {
+  width: 100%;
 }
+    
 *      {
     box-sizing: border-box;
     background-color: $primary-background;
@@ -91,51 +55,7 @@ body {
     margin: auto;
    
 }
-button {
-    display: inline-block;
-    background-color: $h1-color;
-    border-radius: 360px;
-    color: #a3a3a3;
-    border: 4px double #a3a3a3;
-    color: #E8FFC2;
-    text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 200px;
-    transition: all 1s;
-    &:hover {
-        background-color: $hover-color;
-        color: #E8FFC2;
-    }
 
-    
-}
-.card {
-    width: 25%;
-    height: 33.33%;
-    position: relative;
-}
-
-@mixin absolute() {
-    position: absolute;
-    
-}
-.cardFace, .back {
-    @include absolute();
-
-}
-// .cardBack {
-//     @include absolute();
-  
-// }
-// .cardFace, 
-// .back {
-//     position: absolute;
-// }
-
-.flip {
-    display: none;
-}
 
 #timerDiv {
     
